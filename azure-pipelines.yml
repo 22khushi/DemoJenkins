@@ -5,9 +5,7 @@
 
 trigger:
 - master
-- task: Maven@3
-  inputs:
-    mavenPOMFile: 'pom.xml'
+
 
 pool:
   vmImage: 'Ubuntu-16.04'
@@ -15,6 +13,9 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+- task: Maven@3
+  inputs:
+    mavenPOMFile: 'pom.xml'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
