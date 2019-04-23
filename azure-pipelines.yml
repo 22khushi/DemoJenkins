@@ -1,4 +1,7 @@
 # Starter pipeline
+- task: Npm@1
+  inputs:
+    command: 'install'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
